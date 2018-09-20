@@ -1,0 +1,41 @@
+.rating {
+  margin: 0;
+  padding: 0;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: flex-end; }
+
+.rating input {
+  display: none; }
+
+.rating label {
+  display: block;
+  cursor: url(../img/cursor.png), auto;
+  width: 25px; }
+
+.rating label:before {
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  color: #dedede; }
+
+.rating label:after {
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 20px;
+  color: #fdea8d;
+  opacity: 0;
+  transition: .5s; }
+
+.rating label:hover:after,
+.rating label:hover ~ label:after {
+  opacity: 1; }
+
+.rating input:checked ~ label:after {
+  opacity: 1;
+  color: #fcd51c; }
